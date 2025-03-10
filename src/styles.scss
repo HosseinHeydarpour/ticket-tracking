@@ -1,5 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 
+// Fonts
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+:root {
+  --font-family: "Rubik", sans-serif;
+
 // Gloal Reset
 *,
 *::after,
@@ -18,6 +24,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100dvh;
+  font-family: var(--font-family);
 }
 
 // Utility Classes
