@@ -25,6 +25,16 @@ body {
   justify-content: center;
   min-height: 100dvh;
   font-family: var(--font-family);
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  font-size: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
 }
 
 // Utility Classes
