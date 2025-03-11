@@ -110,6 +110,24 @@ ol {
 // Container
 .container {
   max-width: 1440px;
+
+  @media only screen and (max-width: 75rem) {
+    width: 80dvw;
+    max-width: unset;
+  }
+
+  @media only screen and (max-width: 62rem) {
+    width: 60dvw;
+    max-width: unset;
+  }
+  @media only screen and (max-width: 48rem) {
+    width: 85dvw;
+    max-width: unset;
+  }
+
+  @media only screen and (min-width: 75rem) and (max-width: 87.5rem) {
+    padding: 0 5rem;
+  }
 }
 
 // Grid
