@@ -140,3 +140,53 @@ ol {
 .grid-item {
   grid-column: span 1;
 }
+
+// Media Queries
+
+/* Extra small devices (up to 576px) */
+@media (max-width: 35.9988rem) {
+  /* CSS styles for extra small screens */
+}
+
+/* Small devices (≥576px) */
+@media (min-width: 36rem) {
+}
+
+/* Medium devices (≥48rem) */
+@media (min-width: 48rem) {
+}
+
+/* Large devices (≥992px) */
+@media only screen and (min-width: 62rem) {
+  .flex-lg-row {
+    flex-direction: row;
+  }
+
+  .flex-lg-column {
+    flex-direction: column;
+  }
+
+  .flex-lg-wrap {
+    flex-wrap: wrap;
+  }
+
+  .flex-lg-nowrap {
+    flex-wrap: nowrap;
+  }
+}
+/* Extra large devices (≥1200px) */
+@media (min-width: 75rem) {
+  .flex-xl-row {
+    flex-direction: row;
+  }
+  .flex-xl-column {
+    flex-direction: column;
+  }
+}
+
+/* XXL devices (≥1400px) */
+@media (min-width: 87.5rem) {
+  .flex-xxl-row {
+    flex-direction: row;
+  }
+}
