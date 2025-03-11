@@ -1,21 +1,41 @@
-<div class="d-flex flex-column sidebar">
-  <div class="sidebar__user">
-    <div class="sidebar__avatar">
-      <!-- TODO: add dynamic loading to this using inputs -->
-      <img src="avatar.png" alt="Stacey Castillo Profile image" />
-    </div>
+<div class="user">
+  <div class="user__avatar">
+    <!-- TODO: add dynamic loading to this using inputs -->
+    <img src="avatar.png" alt="Stacey Castillo Profile image" />
   </div>
-  <div class="sidebar__period">
-    <ul>
-      <li>
-        <a>Daily</a>
-      </li>
-      <li>
-        <a>Weekly</a>
-      </li>
-      <li>
-        <a>Monthly</a>
-      </li>
-    </ul>
+  <p>Report for</p>
+  <div class="user__name">
+    <h1>Stacey Castillo</h1>
   </div>
+</div>
+
+<div class="period">
+  <ul class="d-flex gap-2 flex-column">
+    <li>
+      <a
+        routerLink="./"
+        routerLinkActive="active"
+        [queryParams]="{
+          period: 'daily'
+        }"
+        >Daily</a
+      >
+    </li>
+    <li>
+      <a
+        routerLink="./"
+        routerLinkActive="active"
+        [queryParams]="{ period: 'weekly' }"
+        >Weekly</a
+      >
+    </li>
+    <li>
+      <a
+        routerLink="./"
+        routerLinkActive="active"
+        [queryParams]="{ period: 'monthly' }"
+        >Monthly</a
+      >
+    </li>
+  </ul>
 </div>
