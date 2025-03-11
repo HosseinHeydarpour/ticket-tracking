@@ -1,0 +1,66 @@
+.report-card {
+  background: #56c2e6 url("../../../../public/fun.svg") no-repeat 95% -10%;
+
+  position: relative;
+
+  background-size: 87px;
+  border-radius: 15px;
+  height: 170px;
+
+  &__header {
+    height: 65px;
+    border-radius: 15px;
+    overflow: hidden;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+
+    img {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    background-color: var(--dark-blue);
+    padding: 3rem;
+    border-radius: 15px;
+    margin-top: -10px;
+  }
+  &__subject {
+    justify-content: space-between;
+    display: flex;
+
+    span:first-child {
+      color: var(--color-white);
+      font-size: 2rem;
+      font-weight: 500;
+    }
+  }
+
+  &__status {
+    display: flex;
+    align-items: center;
+    color: var(--color-white);
+    gap: 8px;
+    span:first-child {
+      font-size: 7.5rem;
+      font-weight: 300;
+      color: var(--color-white);
+      font-style: normal;
+    }
+    span:last-child {
+      font-size: 2.8rem;
+      font-weight: 300;
+    }
+  }
+
+  &__date {
+    color: var(--color-white-100);
+    opacity: 0.6;
+    font-weight: 300;
+    font-size: 1.8rem;
+  }
+}
