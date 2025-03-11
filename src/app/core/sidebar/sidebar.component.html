@@ -15,6 +15,7 @@
       <a
         routerLink="./"
         routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
         [queryParams]="{
           period: 'daily'
         }"
