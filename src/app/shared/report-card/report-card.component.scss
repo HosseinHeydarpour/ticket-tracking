@@ -26,25 +26,49 @@
     display: flex;
     flex-direction: column;
     gap: 1.6rem;
-    background-color: var(--dark-blue);
+
     padding: 3rem;
     border-radius: 15px;
     margin-top: -10px;
     transition: all 0.3s ease-in-out;
 
+    &.dark {
+      background-color: var(--dark-blue);
+    }
+
+    &.light {
+      background-color: var(--color-white);
+    }
+
     &:hover {
+      cursor: pointer;
+    }
+
+    &.dark:hover {
       background-color: var(--saturated-blue);
       cursor: pointer;
+    }
+
+    &.light:hover {
+      background-color: var(--color-white-100);
     }
   }
   &__subject {
     justify-content: space-between;
     display: flex;
 
-    span:first-child {
+    &.light {
+      color: var(--dark-blue-100);
+    }
+
+    &.dark {
       color: var(--color-white);
+    }
+
+    span:first-child {
       font-size: 1.8rem;
       font-weight: 500;
+      color: inherit;
     }
   }
 
@@ -53,10 +77,19 @@
     align-items: center;
     color: var(--color-white);
     gap: 8px;
+
+    &.light {
+      color: var(--dark-blue-100);
+    }
+
+    &.dark {
+      color: var(--color-white);
+    }
+
     span:first-child {
       font-size: 7.5rem;
       font-weight: 300;
-      color: var(--color-white);
+      color: inherit;
       font-style: normal;
 
       @media only screen and (max-width: 62rem) {
@@ -79,6 +112,14 @@
     opacity: 0.6;
     font-weight: 300;
     font-size: 1.8rem;
+
+    &.light {
+      color: var(--dark-blue-100);
+    }
+
+    &.dark {
+      color: var(--color-white);
+    }
 
     span:last-child {
       @media only screen and (max-width: 62rem) {

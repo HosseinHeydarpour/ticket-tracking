@@ -6,14 +6,15 @@ import {
   OnInit,
   signal,
 } from '@angular/core';
-import { Ticket } from './models/ticket.model';
+import { Ticket } from '../models/ticket.model';
 import { TitleCasePipe } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
+import { ThemeDirectiveTsDirective } from '../../core/directives/theme.directive';
 
 @Component({
   selector: 'app-report-card',
   standalone: true,
-  imports: [TitleCasePipe],
+  imports: [TitleCasePipe, ThemeDirectiveTsDirective],
   templateUrl: './report-card.component.html',
   styleUrl: './report-card.component.scss',
 })

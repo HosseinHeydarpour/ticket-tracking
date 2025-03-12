@@ -10,12 +10,12 @@
 }"
 >
   <div class="report-card__header"></div>
-  <div class="report-card__content">
-    <div class="report-card__subject">
+  <div class="report-card__content" appTheme>
+    <div class="report-card__subject" appTheme>
       <span>{{ ticketData().title | titlecase }}</span>
       <span><img src="menu.svg" alt="menu icon" /></span>
     </div>
-    <div class="report-card__status">
+    <div class="report-card__status" appTheme>
       @if (timeframe() === 'daily') {
       <span> {{ ticketData().timeframes.daily.current }} </span>
       } @if (timeframe() === 'weekly') {
@@ -25,7 +25,7 @@
       }
       <span>Completed</span>
     </div>
-    <div class="report-card__date">
+    <div class="report-card__date" appTheme>
       @if (timeframe() === 'daily') {
       <span>Yesterday: </span>
       } @if (timeframe() === 'weekly') {
