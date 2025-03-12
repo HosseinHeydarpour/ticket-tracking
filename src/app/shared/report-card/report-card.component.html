@@ -16,33 +16,33 @@
       <span><img src="menu.svg" alt="menu icon" /></span>
     </div>
     <div class="report-card__status">
-      @if (timeframe() === 'Daily') {
+      @if (timeframe() === 'daily') {
       <span> {{ ticketData().timeframes.daily.current }} </span>
-      } @if (timeframe() === 'Weekly') {
+      } @if (timeframe() === 'weekly') {
       <span> {{ ticketData().timeframes.weekly.current }} </span>
-      } @if (timeframe() === 'Monthly') {
+      } @if (timeframe() === 'monthly') {
       <span> {{ ticketData().timeframes.monthly.current }} </span>
       }
       <span>Completed</span>
     </div>
     <div class="report-card__date">
-      @if (timeframe() === 'Daily') {
+      @if (timeframe() === 'daily') {
       <span>Yesterday: </span>
-      } @if (timeframe() === 'Weekly') {
+      } @if (timeframe() === 'weekly') {
       <span>Last Week: </span>
-      } @if (timeframe() === 'Monthly') {
+      } @if (timeframe() === 'monthly') {
       <span>Last Month: </span>
-      } @if (timeframe() === 'Daily') {
+      } @if (timeframe() === 'daily') {
       <span
         >{{ ticketData().timeframes.daily.previous }}
         <span>Completed</span></span
       >
-      } @if (timeframe() === 'Weekly') {
+      } @if (timeframe() === 'weekly') {
       <span
         >{{ ticketData().timeframes.weekly.previous }}
         <span>Completed</span></span
       >
-      } @if (timeframe() === 'Monthly') {
+      } @if (timeframe() === 'monthly') {
       <span
         >{{ ticketData().timeframes.monthly.previous }}
         <span>Completed</span></span
