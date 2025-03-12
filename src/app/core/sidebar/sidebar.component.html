@@ -1,12 +1,11 @@
 <div class="user">
   <div class="user__avatar">
-    <!-- TODO: add dynamic loading to this using inputs -->
-    <img src="avatar.png" alt="Stacey Castillo Profile image" />
+    <img src="avatar.png" [alt]="username()" />
   </div>
 
   <div class="user__name">
     <p>Report for</p>
-    <h1>Stacey Castillo</h1>
+    <h1>{{ username() }}</h1>
   </div>
 </div>
 

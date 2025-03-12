@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject, input, OnInit } from '@angular/core';
 import {
   ActivatedRoute,
   Params,
@@ -17,6 +17,9 @@ import { ThemeDirectiveTsDirective } from '../directives/theme.directive';
 })
 export class SidebarComponent implements OnInit {
   activatedRoute = inject(ActivatedRoute);
+
+  username = input.required<string>();
+
   constructor(private router: Router) {}
 
   ngOnInit(): void {
