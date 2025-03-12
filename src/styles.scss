@@ -26,6 +26,7 @@
   // * White and Pale Colors
   --color-white: #fff;
   --color-white-100: hsl(236, 100%, 87%);
+  --color-white-200: hsl(228, 12%, 92%);
 
   // * Card Colors
   --color-soft-red: hsl(15, 100%, 70%);
@@ -34,7 +35,6 @@
   --color-lime-green: hsl(145, 58%, 55%);
   --color-violet: hsl(264, 64%, 52%);
   --color-soft-orange: hsl(43, 84%, 65%);
-
   --color-accent: hsl(246, 80.4%, 60%);
 }
 
@@ -60,6 +60,7 @@ body {
   font-family: var(--font-family);
   font-size: var(--defualt-font-size);
   position: relative;
+  transition: background-color 0.3s ease-in-out;
 
   @media only screen and (max-width: 87.5rem) {
     padding-top: 4rem;
@@ -72,7 +73,7 @@ body.dark {
 }
 
 body.light {
-  background-color: var(--color-white);
+  background-color: var(--color-white-200);
 }
 
 a {

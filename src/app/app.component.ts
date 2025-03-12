@@ -2,7 +2,7 @@ import { Component, inject, OnInit, signal } from '@angular/core';
 import { SidebarComponent } from './core/sidebar/sidebar.component';
 import { ReportCardComponent } from './shared/report-card/report-card.component';
 import { TicketService } from './core/services/ticket.service';
-import { Ticket } from './shared/report-card/models/ticket.model';
+import { Ticket } from './shared/models/ticket.model';
 
 import { CommonModule } from '@angular/common';
 

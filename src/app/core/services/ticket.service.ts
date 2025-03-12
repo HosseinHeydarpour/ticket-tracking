@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { TICKETS } from '../../tickets';
-import { Ticket } from '../../shared/report-card/models/ticket.model';
+import { Ticket } from '../../shared/models/ticket.model';
 
 @Injectable({
   providedIn: 'root',
