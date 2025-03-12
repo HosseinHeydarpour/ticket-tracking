@@ -1,4 +1,4 @@
-import { Ticket } from './shared/report-card/models/job.model';
+import { Ticket } from './shared/report-card/models/ticket.model';
 
 export const TICKETS: Ticket[] = [
   {
