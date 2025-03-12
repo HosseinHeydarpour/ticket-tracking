@@ -22,9 +22,10 @@ export class SidebarComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.queryParams.subscribe({
       next: (params: Params) => {
-        if (params['timeframe'] === '') {
+        console.log(params);
+        if (params['timeframe'] === undefined) {
           this.router.navigate([], {
-            queryParams: { timeframe: 'Daily' },
+            queryParams: { timeframe: 'daily' },
           });
         }
       },
