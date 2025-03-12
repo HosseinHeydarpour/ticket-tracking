@@ -12,16 +12,42 @@
   <div class="report-card__header"></div>
   <div class="report-card__content">
     <div class="report-card__subject">
-      <span>Job</span>
+      <span>{{ ticketData().title | titlecase }}</span>
       <span><img src="menu.svg" alt="menu icon" /></span>
     </div>
     <div class="report-card__status">
-      <span>10</span>
+      @if (timeframe() === 'Daily') {
+      <span> {{ ticketData().timeframes.daily.current }} </span>
+      } @if (timeframe() === 'Weekly') {
+      <span> {{ ticketData().timeframes.weekly.current }} </span>
+      } @if (timeframe() === 'Monthly') {
+      <span> {{ ticketData().timeframes.monthly.current }} </span>
+      }
       <span>Completed</span>
     </div>
     <div class="report-card__date">
+      @if (timeframe() === 'Daily') {
+      <span>Yesterday: </span>
+      } @if (timeframe() === 'Weekly') {
       <span>Last Week: </span>
-      <span>4 <span>Completed</span></span>
+      } @if (timeframe() === 'Monthly') {
+      <span>Last Month: </span>
+      } @if (timeframe() === 'Daily') {
+      <span
+        >{{ ticketData().timeframes.daily.previous }}
+        <span>Completed</span></span
+      >
+      } @if (timeframe() === 'Weekly') {
+      <span
+        >{{ ticketData().timeframes.weekly.previous }}
+        <span>Completed</span></span
+      >
+      } @if (timeframe() === 'Monthly') {
+      <span
+        >{{ ticketData().timeframes.monthly.previous }}
+        <span>Completed</span></span
+      >
+      }
     </div>
   </div>
 </div>

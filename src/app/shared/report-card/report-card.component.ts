@@ -1,14 +1,25 @@
-import { Component } from '@angular/core';
+import {
+  Component,
+  DestroyRef,
+  inject,
+  input,
+  OnInit,
+  signal,
+} from '@angular/core';
+import { Ticket } from './models/ticket.model';
+import { TitleCasePipe } from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-report-card',
   standalone: true,
-  imports: [],
+  imports: [TitleCasePipe],
   templateUrl: './report-card.component.html',
-  styleUrl: './report-card.component.scss'
+  styleUrl: './report-card.component.scss',
 })
-export class ReportCardComponent {
-
+export class ReportCardComponent implements OnInit {
+  cardType = input.required<string>();
+  ticketData = input.required<Ticket>();
   activatedRoute = inject(ActivatedRoute);
   timeframe = signal<string>('Daily');
   onDestroy = inject(DestroyRef);
