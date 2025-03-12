@@ -83,7 +83,7 @@
 
 .period {
   max-width: 300px;
-  background-color: var(--dark-blue);
+
   border-radius: 15px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
@@ -92,6 +92,15 @@
   padding: 40px 30px;
   position: relative;
   z-index: 5;
+  transition: all 0.3s ease-in-out;
+
+  &.dark {
+    background-color: var(--dark-blue);
+  }
+
+  &.light {
+    background-color: var(--color-white);
+  }
 
   @media only screen and (max-width: 87.5rem) {
     display: flex;
@@ -113,15 +122,30 @@
   }
 
   a {
-    color: var(--color-white-100);
     opacity: 0.8;
     transition: all 0.3s ease-in-out;
     font-size: 2rem;
     font-weight: 300;
+
+    &.light {
+      color: var(--dark-blue-100);
+    }
+
+    &.dark {
+      color: var(--color-white);
+    }
+
+    &.light.active {
+      color: var(--dark-blue-100);
+    }
+
+    &.dark.active {
+      color: var(--color-white);
+    }
+
     &:hover,
     &.active {
       opacity: 1;
-      color: var(--color-white);
     }
   }
 }

@@ -6,11 +6,12 @@ import {
   RouterLink,
   RouterLinkActive,
 } from '@angular/router';
+import { ThemeDirectiveTsDirective } from '../directives/theme.directive';
 
 @Component({
   selector: 'app-sidebar',
   standalone: true,
-  imports: [RouterLink, RouterLinkActive],
+  imports: [RouterLink, RouterLinkActive, ThemeDirectiveTsDirective],
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.scss',
 })
