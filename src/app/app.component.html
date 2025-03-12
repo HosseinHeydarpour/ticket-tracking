@@ -3,12 +3,12 @@
     <app-sidebar></app-sidebar>
 
     <div class="grid">
-      <div class="grid-item"><app-report-card></app-report-card></div>
-      <div class="grid-item"><app-report-card></app-report-card></div>
-      <div class="grid-item"><app-report-card></app-report-card></div>
-      <div class="grid-item"><app-report-card></app-report-card></div>
-      <div class="grid-item"><app-report-card></app-report-card></div>
-      <div class="grid-item"><app-report-card></app-report-card></div>
+      <div class="grid-item" *ngFor="let ticket of tickets()">
+        <app-report-card
+          [cardType]="ticket.title"
+          [ticketData]="ticket"
+        ></app-report-card>
+      </div>
     </div>
   </div>
 </div>
