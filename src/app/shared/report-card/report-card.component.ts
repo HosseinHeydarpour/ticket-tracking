@@ -9,4 +9,22 @@ import { Component } from '@angular/core';
 })
 export class ReportCardComponent {
 
+  activatedRoute = inject(ActivatedRoute);
+  timeframe = signal<string>('Daily');
+  onDestroy = inject(DestroyRef);
+
+  ngOnInit(): void {
+    const subscription = this.activatedRoute.queryParams.subscribe({
+      next: (params) => {
+        if (params['timeframe']) {
+          this.timeframe.set(params['timeframe']);
+        }
+        console.log(this.timeframe());
+      },
+    });
+
+    this.onDestroy.onDestroy(() => {
+      subscription.unsubscribe();
+    });
+  }
 }
