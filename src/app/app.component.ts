@@ -4,12 +4,19 @@ import { ReportCardComponent } from './shared/report-card/report-card.component'
 import { TicketService } from './core/services/ticket.service';
 import { Ticket } from './shared/models/ticket.model';
 
-import { CommonModule } from '@angular/common';
+import { CommonModule, DOCUMENT } from '@angular/common';
+import { ThemeService } from './core/services/theme.service';
+import { ThemesiwtcherComponent } from './shared/themesiwtcher/themesiwtcher.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [SidebarComponent, ReportCardComponent, CommonModule],
+  imports: [
+    SidebarComponent,
+    ReportCardComponent,
+    CommonModule,
+    ThemesiwtcherComponent,
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
@@ -22,6 +29,5 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.tickets.set(this.ticketService.tickets);
     this.document.body.classList.add(this.themeService.theme());
-  }
   }
 }
