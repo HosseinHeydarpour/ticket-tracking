@@ -1,4 +1,14 @@
-<div class="report-card">
+<div
+  class="report-card"
+  [class]="{
+  'report-card--job': cardType() === 'job',
+  'report-card--fun': cardType() === 'fun',
+  'report-card--learning': cardType() === 'learning',
+  'report-card--sport': cardType() === 'sport',
+  'report-card--emails': cardType() === 'emails',
+  'report-card--health': cardType() === 'health',
+}"
+>
   <div class="report-card__header"></div>
   <div class="report-card__content">
     <div class="report-card__subject">
