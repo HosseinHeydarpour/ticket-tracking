@@ -16,8 +16,12 @@ import { CommonModule } from '@angular/common';
 export class AppComponent implements OnInit {
   ticketService = inject(TicketService);
   tickets = signal<Ticket[]>([]);
+  themeService = inject(ThemeService);
+  document = inject(DOCUMENT);
 
   ngOnInit(): void {
     this.tickets.set(this.ticketService.tickets);
+    this.document.body.classList.add(this.themeService.theme());
+  }
   }
 }
