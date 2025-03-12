@@ -14,28 +14,26 @@
   <ul class="d-flex gap-2 flex-column">
     <li>
       <a
-        routerLink="./"
+        routerLink="/"
         routerLinkActive="active"
         [routerLinkActiveOptions]="{ exact: true }"
-        [queryParams]="{
-          period: 'daily'
-        }"
+        [queryParams]="{ timeframe: 'Daily' }"
         >Daily</a
       >
     </li>
     <li>
       <a
-        routerLink="./"
+        routerLink="/"
         routerLinkActive="active"
-        [queryParams]="{ period: 'weekly' }"
+        [queryParams]="{ timeframe: 'Weekly' }"
         >Weekly</a
       >
     </li>
     <li>
       <a
-        routerLink="./"
+        routerLink="/"
         routerLinkActive="active"
-        [queryParams]="{ period: 'monthly' }"
+        [queryParams]="{ timeframe: 'Monthly' }"
         >Monthly</a
       >
     </li>
