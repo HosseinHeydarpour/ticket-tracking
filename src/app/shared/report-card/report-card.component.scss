@@ -90,11 +90,11 @@
   }
 
   &--job {
-    background: var(--color-soft-blue) url("../../../../public/job.svg")
+    background: var(--color-soft-red) url("../../../../public/job.svg")
       no-repeat 95% -10%;
   }
   &--fun {
-    background: var(--color-soft-red) url("../../../../public/fun.svg")
+    background: var(--color-soft-blue) url("../../../../public/fun.svg")
       no-repeat 95% -10%;
   }
   &--learning {
